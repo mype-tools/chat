@@ -1,0 +1,81 @@
+{
+  "name": "tinode-webapp",
+  "description": "Tinode messenger for the web",
+  "version": "0.16.9",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tinode/example-react-js.git"
+  },
+  "scripts": {
+    "build": "npm run vers && npm run build:prod && npm run build:dev && npm run build:css && npm run build:i18n",
+    "build:css": "postcss css/base.css > css/base.min.css",
+    "build:dev": "webpack --mode development",
+    "build:prod": "webpack --mode production",
+    "build:i18n": "node scripts/flatten-messages.js",
+    "vers": "node scripts/gen-version.js"
+  },
+  "browserslist": "> 0.5%, not IE 11",
+  "files": [
+    "src/index.js",
+    "src/config.js",
+    "src/views/*.jsx",
+    "src/widgets/*.jsx",
+    "src/lib/*.js",
+    "src/i18n/*.json",
+    "umd/index.prod.js",
+    "umd/index.prod.js.map",
+    "umd/index.dev.js",
+    "umd/index.dev.js.map",
+    "umd/tinode.prod.js",
+    "umd/tinode.dev.js",
+    "audio/msg.mp3",
+    "css/base.css",
+    "css/base.min.css",
+    "img/*.png",
+    "img/*.svg",
+    "img/*.jpeg",
+    "index-dev.html",
+    "index.html",
+    "manifest.json",
+    "service-worker.js",
+    "firebase-init.js"
+  ],
+  "keywords": [
+    "chat",
+    "instant-messenger",
+    "message",
+    "messenger",
+    "react",
+    "web"
+  ],
+  "main": "umd/index.prod.js",
+  "bugs": {
+    "url": "https://github.com/tinode/example-react-js/issues"
+  },
+  "homepage": "https://github.com/tinode/chat",
+  "email": "info@tinode.co",
+  "author": "Tinode Authors <info@tinode.co>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "firebase": "^7.24.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-intl": "^4.7.6",
+    "tinode-sdk": "^0.16.9"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-react-intl": "^7.9.4",
+    "browserslist": "^4.16.0",
+    "copy-webpack-plugin": "^6.4.1",
+    "cssnano": "^4.1.10",
+    "postcss": "^7.0.35",
+    "postcss-cli": "^7.1.2",
+    "terser-webpack-plugin": "^3.1.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  }
+}
