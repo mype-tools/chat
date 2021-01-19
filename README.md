@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 WebRTC + PubNub
 =======================
 Open Source Template for Powerful Video Chat, No Plugins
@@ -60,3 +61,6 @@ PubNub Real-time Cloud-Hosted Push API and Push Notification Client Frameworks
 Copyright (c) 2013 PubNub Inc.
 http://www.pubnub.com/
 http://www.pubnub.com/terms
+=======
+# chat
+>>>>>>> 1feeaca71265b111cd4f45a4a0a3927747e38b74
